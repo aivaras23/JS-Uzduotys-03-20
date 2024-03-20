@@ -20,8 +20,8 @@ const data = fs.readFileSync('./js2/data.csv').toString().split('\r\n');
 const getNums = data.map(a => a.split(' ').map(Number));
 
 for (let i = 0; i < getNums.length; i++) {
-    getNums[i][i] = 0;
-    getNums[i][getNums.length - i - 1] = 0;
+    getNums[i][i] = 0; // istrizaine is kairio visurtinio kampo
+    getNums[i][getNums.length - i - 1] = 0; // istrizaine is desines visurtinio kampo
 }
 
 const result = getNums.map(l => l.join(' ')).join('\r\n');
